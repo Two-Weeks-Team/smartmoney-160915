@@ -1,0 +1,41 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-background: #f0f4f8; /* soft gray‑blue */
+  --color-foreground: #111827; /* dark gray */
+  --color-primary: #3b82f6;   /* blue‑500 */
+  --color-accent: #1e40af;    /* blue‑800 */
+  --color-card: #ffffff;      /* white */
+  --color-muted: #e5e7eb;     /* gray‑200 */
+  --color-border: #d1d5db;    /* gray‑300 */
+  --color-success: #10b981;   /* green‑500 */
+  --color-warning: #f59e0b;   /* amber‑500 */
+  --radius: 0.5rem;
+  --shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+/* Subtle textured background */
+body {
+  background: linear-gradient(135deg, var(--color-background) 0%, #e2e8f0 100%);
+  min-height: 100vh;
+  font-family: "Inter", system-ui, sans-serif;
+  color: var(--color-foreground);
+}
+
+/* Card utility */
+.card {
+  @apply bg-card rounded-lg shadow-md p-4;
+}
+
+/* Transition helper */
+.transition-default {
+  @apply transition-colors duration-200 ease-in-out;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .transition-default {
+    @apply transition-none;
+  }
+}
